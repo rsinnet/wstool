@@ -9,3 +9,4 @@ Installing
 Using the pypi package::
 
   $ pip install -U wstool
+
