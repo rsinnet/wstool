@@ -34,7 +34,6 @@ import os
 import yaml
 from vcstools.common import urlopen_netrc
 from wstool.common import MultiProjectException
-import wstool.config
 
 __REPOTYPES__ = ['svn', 'bzr', 'hg', 'git', 'tar']
 __ALLTYPES__ = __REPOTYPES__ + ['other', 'setup-file']
@@ -427,8 +426,6 @@ def generate_config_yaml(config, filename, header, pretty=False,
     version-controlled entries. If False, all entries in current workspace will
     be included.
     """
-    assert isinstance(config, wstool.config.Config)
-
     if not os.path.exists(config.get_base_path()):
         os.makedirs(config.get_base_path())
 
