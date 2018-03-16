@@ -1115,7 +1115,7 @@ The command removes entries from your configuration file, it does not affect you
 
         return 0
 
-    def cmd_export(self, target_path, argv, config=None):
+    def cmd_snapshot(self, target_path, argv, config=None):
         parser = OptionParser(
             usage="usage: %s info [localname]* [OPTIONS]" % self.progname,
             formatter=IndentedHelpFormatterWithNL(),
@@ -1272,7 +1272,7 @@ $ %(prog)s info --only=path,cur_uri,cur_revision robot_model geometry
         elif options.yaml:
             # TODO: Not sure what this does, used to be cmd_snapshot,
             # but that command was not implemented.
-            source_aggregate = multiproject_cmd.cmd_export(config,
+            source_aggregate = multiproject_cmd.cmd_snapshot(config,
                                                              localnames=args)
             print(yaml.safe_dump(source_aggregate), end='')
             return 0

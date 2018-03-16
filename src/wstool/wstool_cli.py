@@ -153,7 +153,7 @@ def wstool_main(argv=None, usage=None):
             'remove': cli.cmd_remove,
             'set': cli.cmd_set,
             'merge': cli.cmd_merge,
-            'export': cli.cmd_export,
+            'export': cli.cmd_snapshot,
             'diff': cli.cmd_diff,
             'foreach': cli.cmd_foreach,
             'scrape': cli.cmd_scrape,
